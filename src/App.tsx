@@ -4,7 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0)
+    const [subcount, setSubCount] = useState(0)
 
   return (
     <>
@@ -23,6 +24,14 @@ function App() {
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <div className="card2">
+              <button onClick={() => setSubCount((subcount) => subcount + count)}>
+          subcount is {subcount}
+        </button>
+        <p>
+          subcount
         </p>
       </div>
       <p className="read-the-docs">
